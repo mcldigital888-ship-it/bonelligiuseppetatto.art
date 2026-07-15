@@ -1,0 +1,365 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Giuseppe Bonelli — Realistic Tattoo Artist | Black &amp; Grey &amp; Color Realism</title>
+<meta name="description" content="Giuseppe Bonelli — hyper-realistic tattoo artist. Black &amp; grey realism, color realism, portrait, wildlife, religious and large-scale sleeves. By appointment and across the U.S. convention circuit.">
+<meta name="theme-color" content="#0a0908">
+<meta property="og:title" content="Giuseppe Bonelli — Realistic Tattoo Artist">
+<meta property="og:description" content="Hyper-realistic black &amp; grey and color tattoos. Portraits, wildlife, religious and large-scale realism.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="img/w01.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+ :root{--bg:#0a0908;--ink:#100e0c;--bone:#ece6da;--mut:#8d8475;--gold:#c9a24b}
+ *{margin:0;padding:0;box-sizing:border-box}
+ html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+ body{background:var(--bg);color:var(--bone);font-family:'Inter',sans-serif;font-weight:300;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+ img{display:block;max-width:100%}
+ .serif{font-family:'Cormorant Garamond',serif}
+ a{color:inherit}
+
+ /* progress + nav */
+ #bar{position:fixed;top:0;left:0;height:2px;width:0;background:linear-gradient(90deg,#8a6f24,var(--gold));z-index:60}
+ nav{position:fixed;top:0;left:0;right:0;z-index:50;display:flex;justify-content:space-between;align-items:center;padding:16px 20px;transition:background .4s,padding .4s,border-color .4s;border-bottom:1px solid transparent}
+ nav.solid{background:rgba(10,9,8,.85);backdrop-filter:blur(10px);border-color:rgba(201,162,75,.18)}
+ nav .logo{font-family:'Cormorant Garamond',serif;font-size:16px;letter-spacing:3px}
+ nav .links{display:none}
+ nav .links a{text-decoration:none;margin-left:24px;font-size:11px;letter-spacing:2px;text-transform:uppercase;opacity:.8;transition:.3s}
+ nav .links a:hover{color:var(--gold);opacity:1}
+
+ /* preloader */
+ #pre{position:fixed;inset:0;background:#0a0908;z-index:100;display:flex;align-items:center;justify-content:center;flex-direction:column;transition:opacity .9s,visibility .9s}
+ #pre.gone{opacity:0;visibility:hidden}
+ #pre .nm{font-family:'Cormorant Garamond',serif;font-size:clamp(20px,7vw,52px);letter-spacing:5px;white-space:nowrap;overflow:hidden}
+ #pre .nm span{display:inline-block;opacity:0;transform:translateY(110%);animation:rise .7s cubic-bezier(.2,.7,.2,1) forwards}
+ #pre .ln{width:0;height:1px;background:var(--gold);margin-top:16px;animation:grow 1s ease .8s forwards}
+ @keyframes rise{to{opacity:1;transform:translateY(0)}}
+ @keyframes grow{to{width:150px}}
+
+ /* HERO */
+ .hero{position:relative;height:100svh;min-height:560px;overflow:hidden;display:flex;align-items:flex-end}
+ .hero .bg{position:absolute;inset:0;overflow:hidden}
+ .hero .bg img{width:100%;height:100%;object-fit:cover;object-position:72% 50%;transform:scale(1.12);animation:ken 18s ease-in-out infinite alternate;filter:contrast(1.06)}
+ @keyframes ken{from{transform:scale(1.08)}to{transform:scale(1.22)}}
+ .hero::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(8,7,6,.95) 2%,rgba(8,7,6,.35) 45%,rgba(8,7,6,.15));z-index:1}
+ .hero .inner{position:relative;z-index:2;width:100%;padding:0 20px 64px}
+ .kick{font-size:11px;letter-spacing:5px;text-transform:uppercase;color:var(--gold);margin-bottom:16px;opacity:0;animation:fadeUp .9s ease 1.1s forwards}
+ .hero h1{font-family:'Cormorant Garamond',serif;font-weight:600;font-size:clamp(50px,16vw,118px);line-height:.92;letter-spacing:.5px}
+ .hero h1 .l{display:inline-block;opacity:0;transform:translateY(50px);animation:fadeUp .9s cubic-bezier(.2,.7,.2,1) forwards}
+ .hero h1 .it{font-style:italic;color:var(--gold)}
+ .hero p.sub{margin-top:18px;max-width:440px;color:#d3cabb;font-size:15px;opacity:0;animation:fadeUp .9s ease 1.6s forwards}
+ @keyframes fadeUp{to{opacity:1;transform:translateY(0)}}
+ .cta{margin-top:26px;display:flex;gap:12px;flex-wrap:wrap;opacity:0;animation:fadeUp .9s ease 1.85s forwards}
+ .btn{display:inline-block;padding:14px 26px;font-size:11px;letter-spacing:2px;text-transform:uppercase;text-decoration:none;border-radius:2px;transition:transform .3s,background .3s,color .3s}
+ .btn.solid{background:var(--gold);color:#191409;font-weight:500}
+ .btn.solid:hover{transform:translateY(-2px)}
+ .btn.ghost{border:1px solid rgba(236,230,218,.4);color:var(--bone)}
+ .btn.ghost:hover{border-color:var(--gold);color:var(--gold);transform:translateY(-2px)}
+
+ /* CINEMATIC REEL: cross-fade between pieces + scroll-zoom into detail */
+ .reels{position:relative}
+ .stage{position:sticky;top:0;height:100svh;overflow:hidden;background:#000}
+ .layer{position:absolute;inset:0;opacity:0;will-change:opacity}
+ .layer img{width:100%;height:100%;object-fit:cover;will-change:transform;filter:contrast(1.07) saturate(1.02)}
+ .stage::after{content:"";position:absolute;inset:0;z-index:3;pointer-events:none;background:radial-gradient(130% 75% at 50% 42%,transparent 38%,rgba(5,4,3,.78))}
+ .rcap{position:absolute;left:0;right:0;bottom:12svh;z-index:4;text-align:center;padding:0 24px;pointer-events:none}
+ .rcap .style{font-size:11px;letter-spacing:4px;text-transform:uppercase;color:var(--gold);opacity:0;transition:opacity .4s}
+ .rcap h3{font-family:'Cormorant Garamond',serif;font-weight:600;font-size:clamp(30px,8vw,64px);line-height:1;margin-top:8px;opacity:0;transition:opacity .4s;text-shadow:0 4px 40px rgba(0,0,0,.7)}
+ .rcap.on .style,.rcap.on h3{opacity:1}
+ .reel-intro{position:absolute;top:14svh;left:0;right:0;z-index:4;text-align:center;pointer-events:none}
+ .reel-intro .e{font-size:11px;letter-spacing:5px;text-transform:uppercase;color:var(--gold)}
+
+ /* sections */
+ .sec{padding:84px 0}
+ .wrap{max-width:1200px;margin:0 auto;padding:0 20px}
+ .head{max-width:760px}
+ .head.ctr{margin:0 auto;text-align:center}
+ .eyebrow{font-size:11px;letter-spacing:5px;text-transform:uppercase;color:var(--gold);margin-bottom:14px}
+ .head h2{font-family:'Cormorant Garamond',serif;font-weight:500;font-size:clamp(30px,7vw,52px);line-height:1.05}
+ .head p{margin-top:14px;color:var(--mut);font-size:15px}
+
+ /* STYLE carousels: horizontal swipe on mobile */
+ .rail{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;padding:28px 20px 8px;scrollbar-width:none}
+ .rail::-webkit-scrollbar{display:none}
+ .card{position:relative;flex:0 0 74%;scroll-snap-align:center;aspect-ratio:3/4;overflow:hidden;border-radius:4px;cursor:zoom-in;background:#161310}
+ .card img{width:100%;height:100%;object-fit:cover;transition:transform .9s cubic-bezier(.2,.7,.2,1);filter:contrast(1.05)}
+ .card:hover img{transform:scale(1.07)}
+ .card::after{content:"";position:absolute;inset:0;background:linear-gradient(transparent 62%,rgba(6,5,4,.6))}
+ .card .cap{position:absolute;left:14px;bottom:13px;z-index:2;font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:var(--bone)}
+ .swipehint{padding:0 20px;color:var(--mut);font-size:11px;letter-spacing:2px;text-transform:uppercase}
+
+ /* ABOUT */
+ .about{display:grid;grid-template-columns:1fr;gap:26px}
+ .about .ph{aspect-ratio:3/4;overflow:hidden;border-radius:4px;max-height:60vh}
+ .about .ph img{width:100%;height:100%;object-fit:cover;filter:grayscale(.1) contrast(1.05)}
+ .about h2{font-family:'Cormorant Garamond',serif;font-weight:500;font-size:clamp(28px,6.4vw,42px);line-height:1.06;margin-bottom:18px}
+ .about p{color:var(--mut);margin-bottom:14px}
+ .stats{display:flex;gap:34px;margin-top:24px;flex-wrap:wrap}
+ .stats .n{font-family:'Cormorant Garamond',serif;color:var(--gold);font-size:34px;line-height:1}
+ .stats .t{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--mut);margin-top:6px}
+
+ /* CONVENTIONS */
+ .conv{border-top:1px solid rgba(201,162,75,.16);border-bottom:1px solid rgba(201,162,75,.16);background:#0d0b09;padding:54px 0;overflow:hidden}
+ .marq{display:flex;gap:42px;white-space:nowrap;width:max-content;animation:scrollx 30s linear infinite;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(26px,7vw,44px);color:rgba(236,230,218,.45);margin-top:30px}
+ .marq span{color:var(--gold);opacity:.85}
+ @keyframes scrollx{to{transform:translateX(-50%)}}
+
+ /* BOOK */
+ .book{text-align:center}
+ .book h2{font-family:'Cormorant Garamond',serif;font-weight:500;font-size:clamp(40px,12vw,84px);margin-bottom:12px;line-height:.98}
+ .book p{color:var(--mut);max-width:480px;margin:0 auto 26px}
+
+ footer{border-top:1px solid rgba(236,230,218,.1);padding:40px 0;text-align:center;color:var(--mut);font-size:13px}
+ footer a{color:var(--gold);text-decoration:none}
+
+ /* reveal */
+ .rv{opacity:0;transform:translateY(34px);transition:opacity .9s ease,transform .9s cubic-bezier(.2,.7,.2,1)}
+ .rv.in{opacity:1;transform:none}
+
+ /* LIGHTBOX */
+ #lb{position:fixed;inset:0;z-index:90;background:rgba(6,5,4,.97);display:none;align-items:center;justify-content:center;opacity:0;transition:opacity .35s}
+ #lb.on{display:flex;opacity:1}
+ #lb img{max-width:94vw;max-height:84svh;object-fit:contain;border-radius:3px;transform:scale(.96);transition:transform .5s cubic-bezier(.2,.7,.2,1);box-shadow:0 30px 90px rgba(0,0,0,.6)}
+ #lb.on img{transform:scale(1)}
+ #lb .x{position:absolute;top:18px;right:22px;font-size:34px;opacity:.8;cursor:pointer}
+ #lb .nav{position:absolute;top:50%;transform:translateY(-50%);font-size:38px;opacity:.55;padding:18px;cursor:pointer;user-select:none}
+ #lb .nav:hover{opacity:1;color:var(--gold)}
+ #lb .prev{left:4px}#lb .next{right:4px}
+ #lb .meta{position:absolute;bottom:16px;left:0;right:0;text-align:center;font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--mut)}
+
+ /* desktop */
+ @media(min-width:820px){
+  nav{padding:20px 40px}nav.solid{padding:14px 40px}nav .logo{font-size:20px;letter-spacing:5px}nav .links{display:block}
+  .hero{align-items:center}.hero .inner{padding:0 56px}
+  .sec{padding:120px 0}.wrap{padding:0 56px}
+  .rail{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;overflow:visible;padding:34px 0 0}
+  .card{flex:none}
+  .swipehint{display:none}
+  .about{grid-template-columns:1fr 1.05fr;gap:60px;align-items:center}.about .ph{max-height:none}
+ }
+ @media(prefers-reduced-motion:reduce){
+  *{animation-duration:.001s!important;animation-delay:0s!important;transition-duration:.001s!important;scroll-behavior:auto}
+  #pre{display:none}.rv{opacity:1;transform:none}
+  .stage{position:relative;height:auto}.layer{position:relative;opacity:1}.layer img{height:70svh}
+  .rcap{position:relative;bottom:auto}.rcap .style,.rcap h3{opacity:1}
+ }
+</style></head>
+<body>
+
+<div id="pre"><div class="nm" id="preNm"></div><div class="ln"></div></div>
+<div id="bar"></div>
+<nav id="nav">
+  <div class="logo">GIUSEPPE&nbsp;BONELLI</div>
+  <div class="links"><a href="#reels">Work</a><a href="#styles">Styles</a><a href="#about">About</a><a href="#book">Book</a></div>
+</nav>
+
+<header class="hero">
+  <div class="bg"><img src="img/w01.webp" alt="Hyper-realistic black and grey eye and serpent tattoo by Giuseppe Bonelli" fetchpriority="high"></div>
+  <div class="inner">
+    <div class="kick">Realistic Tattoo Artist · USA</div>
+    <h1><span class="l" style="animation-delay:1.15s">Realism,</span><br><span class="l it" style="animation-delay:1.35s">in&nbsp;skin.</span></h1>
+    <p class="sub">Hyper-detailed black &amp; grey and color tattoos. Portraits, wildlife, sacred art and full sleeves — by appointment and across the U.S. convention circuit.</p>
+    <div class="cta"><a class="btn solid" href="#styles">Explore the work</a><a class="btn ghost" href="#book">Request a session</a></div>
+  </div>
+</header>
+
+<!-- CINEMATIC REEL -->
+<section class="reels" id="reels" style="--n:5">
+  <div class="stage">
+    <div class="layer" data-origin="50% 38%"><img src="img/co01.webp" alt="Color realism portrait tattoo — female warrior"></div>
+    <div class="layer" data-origin="50% 40%"><img src="img/bg01.webp" alt="Black and grey realism religious portrait tattoo"></div>
+    <div class="layer" data-origin="50% 45%"><img src="img/an01.webp" alt="Black and grey realism panther tattoo"></div>
+    <div class="layer" data-origin="50% 50%"><img src="img/an04.webp" alt="Hyper-realistic tiger eye micro-detail tattoo"></div>
+    <div class="layer" data-origin="50% 45%"><img src="img/sl05.webp" alt="Realistic Milan Duomo architecture sleeve tattoo"></div>
+    <div class="reel-intro"><div class="e">The work · scroll to move inside the detail</div></div>
+    <div class="rcap" id="rcap"></div>
+  </div>
+</section>
+
+<!-- STYLES (SEO-grouped) -->
+<div id="styles"></div>
+
+<section class="sec">
+  <div class="wrap head rv"><div class="eyebrow">01 — Black &amp; grey realism</div><h2>Black &amp; grey portrait &amp; sacred realism.</h2><p>Photorealistic black and grey tattoos — portraits, religious figures and statues rendered in deep contrast and fine detail. The signature of a realism specialist.</p></div>
+  <div class="rail" data-gallery>
+    <div class="card"><img loading="lazy" src="img/bg01.webp" alt="Black and grey realism portrait of Christ tattoo"><span class="cap">Sacred · portrait</span></div>
+    <div class="card"><img loading="lazy" src="img/bg02.webp" alt="Black and grey realism saint portrait tattoo"><span class="cap">Sacred · portrait</span></div>
+    <div class="card"><img loading="lazy" src="img/bg06.webp" alt="Black and grey portrait realism sleeve tattoo"><span class="cap">Portrait realism</span></div>
+    <div class="card"><img loading="lazy" src="img/bg07.webp" alt="Black and grey realism chest portrait tattoo"><span class="cap">Portrait · chest</span></div>
+    <div class="card"><img loading="lazy" src="img/bg03.webp" alt="Black and grey realism statue tattoo"><span class="cap">Statue realism</span></div>
+    <div class="card"><img loading="lazy" src="img/bg04.webp" alt="Black and grey realism leg piece tattoo"><span class="cap">Figure realism</span></div>
+    <div class="card"><img loading="lazy" src="img/bg05.webp" alt="Black and grey realism statue tattoo sleeve"><span class="cap">Statue realism</span></div>
+    <div class="card"><img loading="lazy" src="img/bg08.webp" alt="Black and grey portrait realism tattoo"><span class="cap">Portrait realism</span></div>
+  </div>
+  <div class="swipehint">Swipe →</div>
+</section>
+
+<section class="sec">
+  <div class="wrap head rv"><div class="eyebrow">02 — Animal &amp; wildlife realism</div><h2>Wildlife, rendered alive.</h2><p>Lions, tigers, panthers, eagles and serpents in hyper-realistic black and grey — fur, scale and the catchlight in the eye, drawn by hand.</p></div>
+  <div class="rail" data-gallery>
+    <div class="card"><img loading="lazy" src="img/an01.webp" alt="Realistic black and grey panther tattoo"><span class="cap">Panther</span></div>
+    <div class="card"><img loading="lazy" src="img/an02.webp" alt="Realistic black and grey lion tattoo"><span class="cap">Lion</span></div>
+    <div class="card"><img loading="lazy" src="img/an04.webp" alt="Hyper-realistic tiger eye detail tattoo"><span class="cap">Tiger · detail</span></div>
+    <div class="card"><img loading="lazy" src="img/an07.webp" alt="Realistic lion tattoo sleeve"><span class="cap">Lion</span></div>
+    <div class="card"><img loading="lazy" src="img/an06.webp" alt="Realistic black and grey serpent tattoo"><span class="cap">Serpent</span></div>
+    <div class="card"><img loading="lazy" src="img/an05.webp" alt="Realistic eagle tattoo"><span class="cap">Eagle</span></div>
+    <div class="card"><img loading="lazy" src="img/an03.webp" alt="Realistic lion tattoo black and grey"><span class="cap">Lion</span></div>
+    <div class="card"><img loading="lazy" src="img/p03.webp" alt="Realistic tiger tattoo black and grey"><span class="cap">Tiger</span></div>
+  </div>
+  <div class="swipehint">Swipe →</div>
+</section>
+
+<section class="sec">
+  <div class="wrap head rv"><div class="eyebrow">03 — Color realism</div><h2>Color realism &amp; portraits.</h2><p>Vivid color realism — portraits, nature and bold compositions with lifelike skin tones, light and saturation that hold for years.</p></div>
+  <div class="rail" data-gallery>
+    <div class="card"><img loading="lazy" src="img/co01.webp" alt="Color realism portrait tattoo — warrior goddess"><span class="cap">Color portrait</span></div>
+    <div class="card"><img loading="lazy" src="img/p07.webp" alt="Color portrait realism tattoo"><span class="cap">Color portrait</span></div>
+    <div class="card"><img loading="lazy" src="img/p05.webp" alt="Color portrait realism tattoo with butterflies"><span class="cap">Color portrait</span></div>
+    <div class="card"><img loading="lazy" src="img/co02.webp" alt="Color realism owl tattoo"><span class="cap">Owl · nature</span></div>
+    <div class="card"><img loading="lazy" src="img/co05.webp" alt="Color realism roses tattoo"><span class="cap">Floral</span></div>
+    <div class="card"><img loading="lazy" src="img/co03.webp" alt="Color realism tropical sleeve tattoo"><span class="cap">Tropical sleeve</span></div>
+    <div class="card"><img loading="lazy" src="img/co04.webp" alt="Color realism character sleeve tattoo"><span class="cap">Color sleeve</span></div>
+    <div class="card"><img loading="lazy" src="img/p11.webp" alt="Full color realism sleeve tattoo"><span class="cap">Full color sleeve</span></div>
+  </div>
+  <div class="swipehint">Swipe →</div>
+</section>
+
+<section class="sec">
+  <div class="wrap head rv"><div class="eyebrow">04 — Sleeves &amp; large-scale</div><h2>Sleeves, sacred &amp; architectural realism.</h2><p>Full sleeves, back pieces and architectural realism — from cathedrals and the Milan Duomo to compositions that flow across the whole body.</p></div>
+  <div class="rail" data-gallery>
+    <div class="card"><img loading="lazy" src="img/sl01.webp" alt="Realistic warrior sleeve tattoo black and grey"><span class="cap">Warrior sleeve</span></div>
+    <div class="card"><img loading="lazy" src="img/sl05.webp" alt="Realistic Milan Duomo architecture sleeve tattoo"><span class="cap">Architecture</span></div>
+    <div class="card"><img loading="lazy" src="img/sl06.webp" alt="Realistic cathedral architecture tattoo sleeve"><span class="cap">Architecture</span></div>
+    <div class="card"><img loading="lazy" src="img/sl07.webp" alt="Realistic black and grey full sleeve tattoo"><span class="cap">Full sleeve</span></div>
+    <div class="card"><img loading="lazy" src="img/sl08.webp" alt="Realistic black and grey sleeve tattoo"><span class="cap">Full sleeve</span></div>
+    <div class="card"><img loading="lazy" src="img/sl02.webp" alt="Realistic black and grey sleeve tattoo"><span class="cap">Full sleeve</span></div>
+    <div class="card"><img loading="lazy" src="img/sl03.webp" alt="Large-scale realistic back piece tattoo"><span class="cap">Back piece</span></div>
+    <div class="card"><img loading="lazy" src="img/sl04.webp" alt="Large-scale realistic back piece tattoo"><span class="cap">Back piece</span></div>
+  </div>
+  <div class="swipehint">Swipe →</div>
+</section>
+
+<!-- ABOUT -->
+<section class="sec" id="about">
+  <div class="wrap about">
+    <div class="ph rv"><img src="img/about1.webp" alt="Giuseppe Bonelli tattooing at a convention"></div>
+    <div class="rv">
+      <div class="eyebrow">The artist</div>
+      <h2>One-of-one pieces, drawn from the story they carry.</h2>
+      <p>Giuseppe Bonelli is a realism specialist — black &amp; grey and color work rendered with obsessive precision. Skin, light and emotion, built to read like a photograph and to last like one.</p>
+      <p>Every tattoo is a custom commission, designed one-to-one around the person who wears it. Now accepting select bookings at the studio and across the U.S. convention circuit.</p>
+      <div class="stats">
+        <div><div class="n" data-count="12">12</div><div class="t">Years tattooing</div></div>
+        <div><div class="n" data-count="100">100</div><div class="t">% custom work</div></div>
+        <div><div class="n">USA</div><div class="t">Convention circuit</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONVENTIONS -->
+<section class="conv" id="conventions">
+  <div class="wrap head ctr rv"><div class="eyebrow">On the road</div><h2>Catch Giuseppe across the U.S.</h2><p>Convention schedule updated soon — reserve a slot in advance.</p></div>
+  <div class="marq"><span>Philadelphia</span> · New York · <span>Las Vegas</span> · Miami · <span>Chicago</span> · Austin · <span>Los Angeles</span> · Dallas · <span>Orlando</span> · Denver · <span>Philadelphia</span> · New York · <span>Las Vegas</span> · Miami · <span>Chicago</span> · Austin · <span>Los Angeles</span> · Dallas · <span>Orlando</span> · Denver ·</div>
+</section>
+
+<!-- BOOK -->
+<section class="sec book" id="book">
+  <div class="wrap rv">
+    <div class="eyebrow">Booking</div>
+    <h2>Tell me your idea.</h2>
+    <p>Limited availability. Share your concept, placement and timeline — I'll come back with a plan.</p>
+    <a class="btn solid" href="mailto:info@giuseppebonellitattoo.art">Request a session</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="serif" style="font-size:20px;letter-spacing:4px;color:var(--bone)">GIUSEPPE BONELLI</div>
+    <p style="margin-top:12px">Realistic tattoo artist · <a href="#" id="ig">Instagram</a> · <a href="mailto:info@giuseppebonellitattoo.art">info@giuseppebonellitattoo.art</a></p>
+    <p style="margin-top:8px;opacity:.55">© 2026 Giuseppe Bonelli. All rights reserved.</p>
+  </div>
+</footer>
+
+<div id="lb"><span class="x">&times;</span><span class="nav prev">&#8249;</span><img src="" alt=""><span class="nav next">&#8250;</span><div class="meta"></div></div>
+
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"LocalBusiness","name":"Giuseppe Bonelli — Realistic Tattoo Artist","description":"Hyper-realistic tattoo artist specialising in black & grey realism, color realism, portrait, wildlife, religious and large-scale sleeve tattoos.","image":"img/w01.webp","email":"info@giuseppebonellitattoo.art","url":"https://giuseppebonellitattoo.art","areaServed":"United States","knowsAbout":["black and grey realism tattoo","color realism tattoo","portrait realism tattoo","wildlife realism tattoo","religious realism tattoo","sleeve tattoo"],"founder":{"@type":"Person","name":"Giuseppe Bonelli","jobTitle":"Realistic Tattoo Artist"}}
+</script>
+
+<script>
+(function(){
+ var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+ function clamp(v){return v<0?0:v>1?1:v;}
+
+ /* preloader */
+ var pn=document.getElementById('preNm');
+ if(pn){'GIUSEPPE BONELLI'.split('').forEach(function(c,i){var s=document.createElement('span');s.textContent=c===' '?' ':c;s.style.animationDelay=(0.12+i*0.04)+'s';pn.appendChild(s);});}
+ function hidePre(){var p=document.getElementById('pre');if(p)p.classList.add('gone');}
+ window.addEventListener('load',function(){setTimeout(hidePre,1000);});
+ setTimeout(hidePre,2600);
+
+ /* nav + progress */
+ var nav=document.getElementById('nav'),bar=document.getElementById('bar');
+ function ui(){var y=window.pageYOffset,h=document.documentElement.scrollHeight-window.innerHeight;bar.style.width=(h>0?y/h*100:0)+'%';if(y>40)nav.classList.add('solid');else nav.classList.remove('solid');}
+
+ /* cinematic reel: cross-fade + zoom into detail */
+ var reels=document.getElementById('reels');
+ var layers=[].slice.call(reels.querySelectorAll('.layer'));
+ var N=layers.length;
+ reels.style.height=(N*100)+'svh';
+ layers.forEach(function(L){var im=L.querySelector('img');im.style.transformOrigin=L.getAttribute('data-origin')||'50% 50%';});
+ var STYLES=[
+   {s:'Color realism',h:'Lifelike color'},
+   {s:'Black & grey · sacred',h:'Reverence in detail'},
+   {s:'Wildlife realism',h:'The living gaze'},
+   {s:'Micro-detail',h:'Closer than a photo'},
+   {s:'Architectural realism',h:'Stone, in skin'}
+ ];
+ var rcap=document.getElementById('rcap');
+ var intro=reels.querySelector('.reel-intro');
+ function reel(){
+  if(reduce)return;
+  var vh=window.innerHeight;var rect=reels.getBoundingClientRect();
+  var total=reels.offsetHeight-vh;var p=clamp(-rect.top/total);
+  var seg=p*(N-1);var active=Math.round(seg);
+  layers.forEach(function(L,i){
+   var d=seg-i;var op=clamp(1-Math.abs(d)*1.12);
+   L.style.opacity=op;L.style.zIndex=op>0.02?Math.round(op*100):0;
+   var s=1.08+clamp((d+1)/2)*0.5;
+   L.querySelector('img').style.transform='scale('+s.toFixed(3)+')';
+  });
+  if(intro)intro.style.opacity=clamp(1-seg*1.5);
+  if(STYLES[active]){rcap.innerHTML='<div class="style">'+STYLES[active].s+'</div><h3>'+STYLES[active].h+'</h3>';
+   var frac=Math.abs(seg-active);rcap.classList.toggle('on',frac<0.32);}
+ }
+
+ var t=false;
+ function onScroll(){if(!t){requestAnimationFrame(function(){ui();reel();t=false;});t=true;}}
+ window.addEventListener('scroll',onScroll,{passive:true});
+ window.addEventListener('resize',function(){ui();reel();});
+ ui();reel();
+
+ /* reveals + count-up */
+ var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.16});
+ [].slice.call(document.querySelectorAll('.rv')).forEach(function(el){io.observe(el);});
+ var counted=false;
+ var cio=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting&&!counted){counted=true;
+  [].slice.call(document.querySelectorAll('[data-count]')).forEach(function(el){var to=+el.getAttribute('data-count'),st=null;function step(ts){if(!st)st=ts;var p=clamp((ts-st)/1100);el.textContent=Math.round(to*p);if(p<1)requestAnimationFrame(step);}requestAnimationFrame(step);});}});},{threshold:.5});
+ var ab=document.querySelector('.stats');if(ab)cio.observe(ab);
+
+ /* lightbox over all gallery cards */
+ var imgs=[].slice.call(document.querySelectorAll('[data-gallery] .card img'));
+ var lb=document.getElementById('lb'),lbImg=lb.querySelector('img'),meta=lb.querySelector('.meta'),cur=0;
+ function show(i){cur=(i+imgs.length)%imgs.length;lbImg.src=imgs[cur].src;lbImg.alt=imgs[cur].alt;meta.textContent=imgs[cur].alt;lb.classList.add('on');document.body.style.overflow='hidden';}
+ function close(){lb.classList.remove('on');document.body.style.overflow='';}
+ imgs.forEach(function(im,i){im.parentElement.addEventListener('click',function(){show(i);});});
+ lb.querySelector('.x').addEventListener('click',function(e){e.stopPropagation();close();});
+ lb.querySelector('.prev').addEventListener('click',function(e){e.stopPropagation();show(cur-1);});
+ lb.querySelector('.next').addEventListener('click',function(e){e.stopPropagation();show(cur+1);});
+ lb.addEventListener('click',function(e){if(e.target===lb||e.target===lbImg)close();});
+ document.addEventListener('keydown',function(e){if(!lb.classList.contains('on'))return;if(e.key==='Escape')close();if(e.key==='ArrowLeft')show(cur-1);if(e.key==='ArrowRight')show(cur+1);});
+})();
+</script>
+</body></html>

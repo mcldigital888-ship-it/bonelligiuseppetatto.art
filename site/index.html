@@ -1,0 +1,597 @@
+<!DOCTYPE html><html lang="en-US"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Giuseppe Bonelli — Realistic Tattoo Artist | Black &amp; Grey &amp; Color Realism</title>
+<meta name="description" content="Giuseppe Bonelli — hyper-realistic tattoo artist. Black &amp; grey realism, color realism, portrait, wildlife, religious and large-scale sleeves. Tattoos worn by champions including Lautaro Martínez. By appointment and across the U.S. 2026 convention tour.">
+<link rel="canonical" href="https://giuseppebonellitattoo.art/">
+<meta name="geo.region" content="US"><meta name="geo.placename" content="United States">
+<meta name="keywords" content="realism tattoo artist, black and grey realism tattoo, color realism tattoo, portrait tattoo, wildlife tattoo, Lautaro Martinez tattoo, tattoo convention USA, realistic tattoo artist America">
+<meta name="theme-color" content="#0a0908">
+<meta property="og:title" content="Giuseppe Bonelli — Realistic Tattoo Artist">
+<meta property="og:description" content="Hyper-realistic black &amp; grey and color tattoos. Worn by champions. Book the 2026 U.S. tour.">
+<meta property="og:type" content="website"><meta property="og:image" content="img/w01s.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+ :root{--bg:#0a0908;--ink:#100e0c;--bone:#ece6da;--mut:#8d8475;--gold:#c9a24b}
+ *{margin:0;padding:0;box-sizing:border-box}
+ html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+ body{background:var(--bg);color:var(--bone);font-family:'Inter',sans-serif;font-weight:300;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+ img{display:block;max-width:100%}
+ .serif{font-family:'Cormorant Garamond',serif}a{color:inherit}
+ #bar{position:fixed;top:0;left:0;height:2px;width:0;background:linear-gradient(90deg,#8a6f24,var(--gold));z-index:60}
+ nav{position:fixed;top:0;left:0;right:0;z-index:50;display:flex;justify-content:space-between;align-items:center;padding:16px 20px;transition:.4s;border-bottom:1px solid transparent}
+ nav.solid{background:rgba(10,9,8,.85);backdrop-filter:blur(10px);border-color:rgba(201,162,75,.18)}
+ nav .logo{font-family:'Cormorant Garamond',serif;font-size:16px;letter-spacing:3px}
+ nav .links{display:none}
+ nav .links a{text-decoration:none;margin-left:22px;font-size:11px;letter-spacing:2px;text-transform:uppercase;opacity:.8;transition:.3s}
+ nav .links a:hover{color:var(--gold);opacity:1}
+
+ #pre{position:fixed;inset:0;background:#0a0908;z-index:100;display:flex;align-items:center;justify-content:center;flex-direction:column;transition:opacity .9s,visibility .9s}
+ #pre.gone{opacity:0;visibility:hidden}
+ #pre .nm{font-family:'Cormorant Garamond',serif;font-size:clamp(20px,7vw,52px);letter-spacing:5px;white-space:nowrap;overflow:hidden;opacity:0;transform:translateY(28px);animation:rise .9s cubic-bezier(.2,.7,.2,1) .15s forwards}
+ #pre .ln{width:0;height:1px;background:var(--gold);margin-top:16px;animation:grow 1s ease .8s forwards}
+ @keyframes rise{to{opacity:1;transform:translateY(0)}}@keyframes grow{to{width:150px}}
+
+ .hero{position:relative;height:100svh;min-height:560px;overflow:hidden;display:flex;align-items:flex-end}
+ .hero .bg{position:absolute;inset:0;overflow:hidden}
+ .hero .bg img{width:100%;height:100%;object-fit:cover;object-position:58% 50%;transform:scale(1.1);animation:ken 18s ease-in-out infinite alternate;filter:contrast(1.06)}
+ @keyframes ken{from{transform:scale(1.06)}to{transform:scale(1.2)}}
+ .hero::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(8,7,6,.95) 2%,rgba(8,7,6,.32) 45%,rgba(8,7,6,.12));z-index:1}
+ .hero .inner{position:relative;z-index:2;width:100%;padding:0 20px 60px}
+ .kick{font-size:11px;letter-spacing:5px;text-transform:uppercase;color:var(--gold);margin-bottom:16px;opacity:0;animation:fadeUp .9s ease 1.1s forwards}
+ .hero h1{font-family:'Cormorant Garamond',serif;font-weight:600;font-size:clamp(50px,16vw,118px);line-height:.92}
+ .hero h1 .l{display:inline-block;opacity:0;transform:translateY(50px);animation:fadeUp .9s cubic-bezier(.2,.7,.2,1) forwards}
+ .hero h1 .it{font-style:italic;color:var(--gold)}
+ .hero p.sub{margin-top:18px;max-width:440px;color:#d3cabb;font-size:15px;opacity:0;animation:fadeUp .9s ease 1.6s forwards}
+ @keyframes fadeUp{to{opacity:1;transform:translateY(0)}}
+ .cta{margin-top:26px;display:flex;gap:12px;flex-wrap:wrap;opacity:0;animation:fadeUp .9s ease 1.85s forwards}
+ .btn{display:inline-block;padding:14px 26px;font-size:11px;letter-spacing:2px;text-transform:uppercase;text-decoration:none;border-radius:2px;transition:.3s;cursor:pointer;border:0;font-family:inherit}
+ .btn.solid{background:var(--gold);color:#191409;font-weight:500}.btn.solid:hover{transform:translateY(-2px)}
+ .btn.ghost{border:1px solid rgba(236,230,218,.4);color:var(--bone);background:transparent}.btn.ghost:hover{border-color:var(--gold);color:var(--gold);transform:translateY(-2px)}
+
+ /* CINEMATIC REEL (first-site animation: cross-fade + scroll-zoom) */
+ .reels{position:relative}
+ .stage{position:sticky;top:0;height:100svh;overflow:hidden;background:#000}
+ .layer{position:absolute;inset:0;opacity:0;will-change:opacity}
+ .layer img{width:100%;height:100%;object-fit:cover;will-change:transform;filter:contrast(1.07) saturate(1.02)}
+ .stage::after{content:"";position:absolute;inset:0;z-index:5;pointer-events:none;background:radial-gradient(135% 80% at 50% 44%,transparent 40%,rgba(5,4,3,.78))}
+ .rc{position:absolute;left:0;right:0;bottom:13svh;z-index:6;text-align:center;padding:0 24px;pointer-events:none;will-change:opacity}
+ .rc .s{font-size:11px;letter-spacing:4px;text-transform:uppercase;color:var(--gold)}
+ .rc h3{font-family:'Cormorant Garamond',serif;font-weight:600;font-size:clamp(30px,8vw,66px);line-height:1;margin-top:8px;text-shadow:0 4px 40px rgba(0,0,0,.7)}
+ .reel-hint{position:absolute;top:13svh;left:0;right:0;z-index:6;text-align:center;pointer-events:none;font-size:11px;letter-spacing:5px;text-transform:uppercase;color:var(--gold)}
+
+ .sec{padding:84px 0}.wrap{max-width:1200px;margin:0 auto;padding:0 20px}
+ .head{max-width:780px}.head.ctr{margin:0 auto;text-align:center}
+ .eyebrow{font-size:11px;letter-spacing:5px;text-transform:uppercase;color:var(--gold);margin-bottom:14px}
+ .head h2{font-family:'Cormorant Garamond',serif;font-weight:500;font-size:clamp(30px,7vw,52px);line-height:1.05}
+ .head p{margin-top:14px;color:var(--mut);font-size:15px}
+
+ /* CHAMPIONS */
+ .champ{background:linear-gradient(180deg,#0d0b08,#0a0908);border-top:1px solid rgba(201,162,75,.18);border-bottom:1px solid rgba(201,162,75,.18)}
+ .champ-grid{display:grid;grid-template-columns:1fr;gap:16px;margin-top:30px}
+ .champ-card{position:relative;overflow:hidden;border-radius:5px;aspect-ratio:3/4;cursor:zoom-in}
+ .champ-card img{width:100%;height:100%;object-fit:cover;transition:transform 1s cubic-bezier(.2,.7,.2,1)}
+ .champ-card:hover img{transform:scale(1.05)}
+ .champ-card::after{content:"";position:absolute;inset:0;background:linear-gradient(transparent 55%,rgba(6,5,3,.82))}
+ .champ-card .nm{position:absolute;left:18px;bottom:16px;z-index:2}
+ .champ-card .nm b{font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:600;display:block}
+ .champ-card .nm span{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--gold)}
+ .champ-tag{display:inline-block;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:#1a1408;background:var(--gold);padding:5px 12px;border-radius:30px;margin-bottom:8px}
+
+ .rail{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;padding:28px 20px 8px;scrollbar-width:none}
+ .rail::-webkit-scrollbar{display:none}
+ .card{position:relative;flex:0 0 74%;scroll-snap-align:center;aspect-ratio:3/4;overflow:hidden;border-radius:4px;cursor:zoom-in;background:#161310}
+ .card img{width:100%;height:100%;object-fit:cover;transition:transform .9s cubic-bezier(.2,.7,.2,1);filter:contrast(1.05)}
+ .card:hover img{transform:scale(1.07)}
+ .card::after{content:"";position:absolute;inset:0;background:linear-gradient(transparent 62%,rgba(6,5,4,.6))}
+ .card .cap{position:absolute;left:14px;bottom:13px;z-index:2;font-size:11px;letter-spacing:1.5px;text-transform:uppercase}
+ .swipehint{padding:0 20px;color:var(--mut);font-size:11px;letter-spacing:2px;text-transform:uppercase}
+
+ .about{display:grid;grid-template-columns:1fr;gap:26px}
+ .about .ph{aspect-ratio:3/4;overflow:hidden;border-radius:4px;max-height:60vh}
+ .about .ph img{width:100%;height:100%;object-fit:cover;filter:grayscale(.1) contrast(1.05)}
+ .about h2{font-family:'Cormorant Garamond',serif;font-weight:500;font-size:clamp(28px,6.4vw,42px);line-height:1.06;margin-bottom:18px}
+ .about p{color:var(--mut);margin-bottom:14px}
+ .stats{display:flex;gap:34px;margin-top:24px;flex-wrap:wrap}
+ .stats .n{font-family:'Cormorant Garamond',serif;color:var(--gold);font-size:34px;line-height:1}
+ .stats .t{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--mut);margin-top:6px}
+
+ /* TOUR + MAP + FORM */
+ .tour{background:#0d0b09;border-top:1px solid rgba(201,162,75,.16);border-bottom:1px solid rgba(201,162,75,.16)}
+ .mapwrap{margin:30px 0 6px;border:1px solid rgba(201,162,75,.16);border-radius:10px;background:radial-gradient(120% 120% at 50% 0,#13100b,#0b0907);padding:8px}
+ .usmap{width:100%;height:auto;display:block}
+ .usmap .land{fill:#181410;stroke:rgba(201,162,75,.35);stroke-width:1.5}
+ .usmap .route{fill:none;stroke:var(--gold);stroke-width:2.4;stroke-dasharray:1400;stroke-dashoffset:1400;filter:drop-shadow(0 0 4px rgba(201,162,75,.6))}
+ .usmap .route.draw{animation:draw 4.5s ease forwards}
+ @keyframes draw{to{stroke-dashoffset:0}}
+ .usmap .pin{fill:var(--gold)}
+ .usmap .ping{fill:none;stroke:var(--gold);transform-origin:center;transform-box:fill-box;animation:ping 2.4s ease-out infinite}
+ @keyframes ping{0%{transform:scale(.5);opacity:.9}100%{transform:scale(3);opacity:0}}
+ .usmap .plane{fill:#fff;filter:drop-shadow(0 0 6px rgba(255,255,255,.8))}
+ .usmap text{fill:var(--bone);font-family:'Inter',sans-serif;font-size:15px;opacity:0;animation:cityin .5s ease forwards}
+ .usmap text.dt{fill:var(--gold);font-size:12px;letter-spacing:1px}
+ @keyframes cityin{to{opacity:1}}
+ .tourcards{display:grid;grid-template-columns:1fr;gap:12px;margin-top:24px}
+ .tc{border:1px solid rgba(201,162,75,.18);border-radius:6px;padding:16px 18px;display:flex;justify-content:space-between;align-items:center;gap:14px;background:#100d0a;transition:.3s;cursor:pointer}
+ .tc:hover{border-color:var(--gold);transform:translateY(-2px)}
+ .tc .city{font-family:'Cormorant Garamond',serif;font-size:21px}
+ .tc .ev{font-size:12px;color:var(--mut);margin-top:3px}
+ .tc .dt{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-top:6px}
+ .tc .rsv{font-size:11px;letter-spacing:2px;text-transform:uppercase;white-space:nowrap;color:var(--gold)}
+
+ /* FORM */
+ .formwrap{margin-top:40px;border:1px solid rgba(201,162,75,.2);border-radius:12px;padding:26px;background:#100d0a}
+ .formwrap h3{font-family:'Cormorant Garamond',serif;font-weight:500;font-size:28px;margin-bottom:6px}
+ .formwrap .fsub{color:var(--mut);font-size:14px;margin-bottom:22px}
+ .frow{display:grid;grid-template-columns:1fr;gap:14px;margin-bottom:14px}
+ .field label{display:block;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--mut);margin-bottom:6px}
+ .field input,.field select,.field textarea{width:100%;background:#0a0807;border:1px solid rgba(236,230,218,.16);color:var(--bone);padding:13px 14px;border-radius:6px;font-family:inherit;font-size:16px;transition:border .25s}
+ .field input:focus,.field select:focus,.field textarea:focus{outline:0;border-color:var(--gold)}
+ .field textarea{min-height:96px;resize:vertical}
+ .formwrap .note{font-size:11px;color:var(--mut);margin-top:12px}
+ .formwrap .ok{display:none;color:#7fe3c0;font-size:14px;margin-top:14px}
+
+ .book{text-align:center}
+ .book h2{font-family:'Cormorant Garamond',serif;font-weight:500;font-size:clamp(40px,12vw,84px);margin-bottom:12px;line-height:.98}
+ .book p{color:var(--mut);max-width:480px;margin:0 auto 26px}
+ /* process / faq / aftercare / champions extra */
+ .steps{display:grid;grid-template-columns:1fr;gap:14px;margin-top:34px}
+ .step{border:1px solid rgba(201,162,75,.16);border-radius:8px;padding:20px;background:#100d0a}
+ .step span{font-family:'Cormorant Garamond',serif;font-style:italic;color:var(--gold);font-size:22px}
+ .step h4{font-size:15px;margin:8px 0 6px;font-weight:500;letter-spacing:.3px}
+ .step p{color:var(--mut);font-size:14px}
+ .policy{margin-top:22px;border-left:2px solid var(--gold);padding:6px 0 6px 16px;color:var(--mut);font-size:13.5px;max-width:760px}
+ .policy b{color:var(--bone);font-weight:500}
+ .faqs{margin-top:30px;max-width:820px}
+ .faqs details{border-bottom:1px solid rgba(236,230,218,.12);padding:4px 0}
+ .faqs summary{cursor:pointer;list-style:none;padding:18px 30px 18px 0;font-size:16px;position:relative;color:var(--bone);font-family:'Cormorant Garamond',serif;font-weight:500}
+ .faqs summary::-webkit-details-marker{display:none}
+ .faqs summary::after{content:"+";position:absolute;right:4px;top:16px;color:var(--gold);font-size:22px;transition:transform .3s;font-family:'Inter'}
+ .faqs details[open] summary::after{transform:rotate(45deg)}
+ .faqs details p{color:var(--mut);font-size:14.5px;padding:0 0 18px;max-width:740px}
+ .care{display:grid;grid-template-columns:1fr;gap:12px;margin-top:30px}
+ .care .ph{border:1px solid rgba(201,162,75,.14);border-radius:8px;padding:18px;background:#100d0a}
+ .care .ph b{display:block;color:var(--gold);font-size:12px;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:6px}
+ .care .ph p{color:var(--mut);font-size:14px}
+ .champ-proof{margin-top:18px;color:var(--mut);font-size:14.5px}
+ .champ-proof b{color:var(--bone);font-weight:400}
+ .roster{display:grid;grid-template-columns:1fr;gap:14px;margin-top:30px}
+ .roster .r{border-top:1px solid rgba(201,162,75,.22);padding-top:13px}
+ .roster .r b{font-family:'Cormorant Garamond',serif;font-size:21px;font-weight:600;display:block;color:var(--bone)}
+ .roster .r span{font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold)}
+ @media(min-width:820px){.roster{grid-template-columns:repeat(3,1fr);gap:26px}}
+ .socials{margin-top:10px}.socials a{margin:0 7px;color:var(--gold);text-decoration:none;font-size:13px}
+ @media(min-width:820px){.steps{grid-template-columns:repeat(3,1fr)}.care{grid-template-columns:repeat(2,1fr)}}
+ footer{border-top:1px solid rgba(236,230,218,.1);padding:40px 0;text-align:center;color:var(--mut);font-size:13px}
+ footer a{color:var(--gold);text-decoration:none}
+
+ .rv{opacity:0;transform:translateY(34px);transition:opacity .9s ease,transform .9s cubic-bezier(.2,.7,.2,1)}
+ .rv.in{opacity:1;transform:none}
+
+ #lb{position:fixed;inset:0;z-index:90;background:rgba(6,5,4,.97);display:none;align-items:center;justify-content:center;opacity:0;transition:opacity .35s}
+ #lb.on{display:flex;opacity:1}
+ #lb img{max-width:94vw;max-height:84svh;object-fit:contain;border-radius:3px;transform:scale(.96);transition:transform .5s cubic-bezier(.2,.7,.2,1);box-shadow:0 30px 90px rgba(0,0,0,.6)}
+ #lb.on img{transform:scale(1)}
+ #lb .x{position:absolute;top:18px;right:22px;font-size:34px;opacity:.8;cursor:pointer}
+ #lb .nav{position:absolute;top:50%;transform:translateY(-50%);font-size:38px;opacity:.55;padding:18px;cursor:pointer;user-select:none}
+ #lb .nav:hover{opacity:1;color:var(--gold)}#lb .prev{left:4px}#lb .next{right:4px}
+ #lb .meta{position:absolute;bottom:16px;left:0;right:0;text-align:center;font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--mut)}
+
+ @media(min-width:820px){
+  nav{padding:20px 40px}nav.solid{padding:14px 40px}nav .logo{font-size:20px;letter-spacing:5px}nav .links{display:block}
+  .hero{align-items:center}.hero .bg img{object-position:62% 50%}.hero .inner{padding:0 56px}
+  .sec{padding:120px 0}.wrap{padding:0 56px}
+  .champ-grid{grid-template-columns:1.25fr 1fr}
+  .rail{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;overflow:visible;padding:34px 0 0}.card{flex:none}.swipehint{display:none}
+  .about{grid-template-columns:1fr 1.05fr;gap:60px;align-items:center}.about .ph{max-height:none}
+  .tourcards{grid-template-columns:1fr 1fr}
+  .frow.two{grid-template-columns:1fr 1fr}
+  .formwrap{padding:40px}
+ }
+ @media(prefers-reduced-motion:reduce){
+  *{animation-duration:.001s!important;animation-delay:0s!important;transition-duration:.001s!important;scroll-behavior:auto}
+  #pre{display:none}.rv{opacity:1;transform:none}
+  .reels{height:auto!important}.stage{position:relative;height:auto}.layer{position:relative;opacity:1}.layer img{height:64svh;transform:none!important}.rc{position:relative;bottom:auto}
+  .usmap .route{stroke-dashoffset:0}.usmap text{opacity:1}
+ }
+</style></head>
+<body>
+
+<div id="pre" translate="no"><div class="nm" id="preNm">GIUSEPPE BONELLI</div><div class="ln"></div></div>
+<div id="bar"></div>
+<nav id="nav">
+  <div class="logo" translate="no">GIUSEPPE&nbsp;BONELLI</div>
+  <div class="links"><a href="#reels">Work</a><a href="#champions">Champions</a><a href="#styles">Styles</a><a href="#tour">U.S. Tour</a><a href="#book">Book</a></div>
+</nav>
+
+<header class="hero">
+  <div class="bg"><img src="img/w01s.webp" alt="Hyper-realistic black and grey eye tattoo by Giuseppe Bonelli" fetchpriority="high"></div>
+  <div class="inner">
+    <div class="kick">Realistic Tattoo Artist · USA</div>
+    <h1><span class="l" style="animation-delay:1.15s">Realism,</span><br><span class="l it" style="animation-delay:1.35s">in&nbsp;skin.</span></h1>
+    <p class="sub">Hyper-detailed black &amp; grey and color tattoos. Worn by champions — by appointment and across the U.S. 2026 convention tour.</p>
+    <div class="cta"><a class="btn solid" href="#tour">Book the U.S. tour</a><a class="btn ghost" href="#reels">View the work</a></div>
+  </div>
+</header>
+
+<!-- CINEMATIC REEL (first-site animation) -->
+<section class="reels" id="reels">
+  <div class="stage">
+    <div class="layer"><img src="img/co01.webp" alt="Color realism portrait tattoo — the eye"></div>
+    <div class="layer"><img src="img/an01.webp" alt="Realistic black and grey lion tattoo"></div>
+    <div class="layer"><img src="img/an04.webp" alt="Hyper-realistic tiger eye tattoo"></div>
+    <div class="layer"><img src="img/bg01.webp" alt="Black and grey realism religious portrait tattoo"></div>
+    <div class="layer"><img src="img/sl05.webp" alt="Realistic cathedral architecture sleeve tattoo"></div>
+    <div class="reel-hint" id="reelHint">Scroll to move inside the detail</div>
+    <div class="rc" id="rc"></div>
+  </div>
+</section>
+
+<!-- CHAMPIONS -->
+<section class="sec champ" id="champions">
+  <div class="wrap">
+    <div class="head rv"><span class="champ-tag">VIP · Worn by champions</span><h2>The ink behind the world's champions.</h2><p>When global football icons want realism that lasts, they come to Giuseppe. His lion runs across the back of <b style="color:var(--bone);font-weight:400">Lautaro Martínez</b> — and his needle has marked some of the biggest names in the game. Now he's bringing that level to the United States.</p></div>
+    <div class="champ-grid">
+      <div class="champ-card rv" data-lb><img src="img/champ01.webp" alt="Lautaro Martínez lion back tattoo by Giuseppe Bonelli"><div class="nm"><span>Inter Milan · Argentina</span><b>Lautaro Martínez</b></div></div>
+      <div class="champ-card rv" data-lb><img src="img/champ02.webp" alt="Lautaro Martínez realistic lion back piece detail by Giuseppe Bonelli"><div class="nm"><span>Black &amp; grey · back piece</span><b>The lion</b></div></div>
+    </div>
+    <div class="roster rv">
+      <div class="r"><b>Lautaro Martínez</b><span>Inter Milan · Argentina · World Cup winner</span></div>
+      <div class="r"><b>Gianluigi Donnarumma</b><span>Italy · Euro 2020 winner</span></div>
+      <div class="r"><b>Alessio Romagnoli</b><span>Italy international defender</span></div>
+    </div>
+  </div>
+</section>
+
+<div id="styles"></div>
+<section class="sec">
+  <div class="wrap head rv"><div class="eyebrow">01 — Black &amp; grey realism</div><h2>Black &amp; grey portrait &amp; sacred realism.</h2><p>Photorealistic black and grey tattoos — portraits, religious figures and statues rendered in deep contrast and fine detail.</p></div>
+  <div class="rail" data-gallery>
+    <div class="card"><img loading="lazy" src="img/bg01.webp" alt="Black and grey realism portrait of Christ tattoo"><span class="cap">Sacred · portrait</span></div>
+    <div class="card"><img loading="lazy" src="img/bg02.webp" alt="Black and grey realism saint portrait tattoo"><span class="cap">Sacred · portrait</span></div>
+    <div class="card"><img loading="lazy" src="img/bg06.webp" alt="Black and grey portrait realism sleeve tattoo"><span class="cap">Portrait realism</span></div>
+    <div class="card"><img loading="lazy" src="img/bg07.webp" alt="Black and grey realism chest portrait tattoo"><span class="cap">Portrait · chest</span></div>
+    <div class="card"><img loading="lazy" src="img/bg05.webp" alt="Black and grey realism statue sleeve tattoo"><span class="cap">Statue realism</span></div>
+    <div class="card"><img loading="lazy" src="img/bg08.webp" alt="Black and grey portrait realism tattoo"><span class="cap">Portrait realism</span></div>
+    <div class="card"><img loading="lazy" src="img/co01.webp" alt="Black and grey realism portrait tattoo, warrior goddess"><span class="cap">Portrait realism</span></div>
+  </div><div class="swipehint">Swipe →</div>
+</section>
+
+<section class="sec">
+  <div class="wrap head rv"><div class="eyebrow">02 — Animal &amp; wildlife realism</div><h2>Wildlife, rendered alive.</h2><p>Lions, tigers, panthers, eagles and serpents in hyper-realistic black and grey — fur, scale and the catchlight in the eye.</p></div>
+  <div class="rail" data-gallery>
+    <div class="card"><img loading="lazy" src="img/an01.webp" alt="Realistic black and grey lion tattoo"><span class="cap">Lion</span></div>
+    <div class="card"><img loading="lazy" src="img/an04.webp" alt="Hyper-realistic tiger eye detail tattoo"><span class="cap">Tiger · detail</span></div>
+    <div class="card"><img loading="lazy" src="img/an05.webp" alt="Realistic black and grey eagle tattoo"><span class="cap">Eagle</span></div>
+    <div class="card"><img loading="lazy" src="img/an02.webp" alt="Realistic black and grey lion tattoo sleeve"><span class="cap">Lion</span></div>
+    <div class="card"><img loading="lazy" src="img/an06.webp" alt="Realistic black and grey serpent tattoo"><span class="cap">Serpent</span></div>
+    <div class="card"><img loading="lazy" src="img/an07.webp" alt="Realistic lion tattoo sleeve"><span class="cap">Lion</span></div>
+    <div class="card"><img loading="lazy" src="img/an03.webp" alt="Realistic lion tattoo black and grey"><span class="cap">Lion</span></div>
+  </div><div class="swipehint">Swipe →</div>
+</section>
+
+<section class="sec">
+  <div class="wrap head rv"><div class="eyebrow">03 — Color realism</div><h2>Color realism &amp; portraits.</h2><p>Vivid color realism — portraits, nature and bold compositions with lifelike skin tones and light.</p></div>
+  <div class="rail" data-gallery>
+    <div class="card"><img loading="lazy" src="img/p07.webp" alt="Color portrait realism tattoo golden tears"><span class="cap">Color portrait</span></div>
+    <div class="card"><img loading="lazy" src="img/p05.webp" alt="Color portrait realism tattoo"><span class="cap">Color portrait</span></div>
+    <div class="card"><img loading="lazy" src="img/co02.webp" alt="Color realism owl tattoo"><span class="cap">Owl · nature</span></div>
+    <div class="card"><img loading="lazy" src="img/p09.webp" alt="Color realism character tattoo"><span class="cap">Color · character</span></div>
+    <div class="card"><img loading="lazy" src="img/co04.webp" alt="Color realism leg sleeve tattoo"><span class="cap">Color leg sleeve</span></div>
+    <div class="card"><img loading="lazy" src="img/co03.webp" alt="Color realism leg sleeve tattoo"><span class="cap">Color leg sleeve</span></div>
+    <div class="card"><img loading="lazy" src="img/co05.webp" alt="Color realism leg sleeve tattoo"><span class="cap">Color leg sleeve</span></div>
+    <div class="card"><img loading="lazy" src="img/p11.webp" alt="Full color realism sleeve tattoo"><span class="cap">Full color sleeve</span></div>
+  </div><div class="swipehint">Swipe →</div>
+</section>
+
+<section class="sec">
+  <div class="wrap head rv"><div class="eyebrow">04 — Sleeves &amp; large-scale</div><h2>Sleeves, sacred &amp; architectural realism.</h2><p>Full sleeves, back pieces and architectural realism — from cathedrals and the Milan Duomo to compositions across the whole body.</p></div>
+  <div class="rail" data-gallery>
+    <div class="card"><img loading="lazy" src="img/sl02.webp" alt="Realistic statue full sleeve tattoo, front view"><span class="cap">Statue sleeve · I</span></div>
+    <div class="card"><img loading="lazy" src="img/bg04.webp" alt="Realistic statue full sleeve tattoo, side view"><span class="cap">Statue sleeve · II</span></div>
+    <div class="card"><img loading="lazy" src="img/bg03.webp" alt="Realistic statue full sleeve tattoo, inner view"><span class="cap">Statue sleeve · III</span></div>
+    <div class="card"><img loading="lazy" src="img/sl01.webp" alt="Realistic warrior sleeve tattoo black and grey"><span class="cap">Warrior sleeve</span></div>
+    <div class="card"><img loading="lazy" src="img/sl05.webp" alt="Realistic Milan Duomo architecture sleeve tattoo"><span class="cap">Architecture</span></div>
+    <div class="card"><img loading="lazy" src="img/sl06.webp" alt="Realistic cathedral architecture tattoo sleeve"><span class="cap">Architecture</span></div>
+    <div class="card"><img loading="lazy" src="img/sl07.webp" alt="Realistic black and grey full sleeve tattoo"><span class="cap">Full sleeve</span></div>
+    <div class="card"><img loading="lazy" src="img/sl08.webp" alt="Realistic black and grey sleeve tattoo"><span class="cap">Full sleeve</span></div>
+    <div class="card"><img loading="lazy" src="img/sl04.webp" alt="Large-scale realistic back piece tattoo"><span class="cap">Back piece</span></div>
+  </div><div class="swipehint">Swipe →</div>
+</section>
+
+<!-- ABOUT -->
+<section class="sec" id="about">
+  <div class="wrap about">
+    <div class="ph rv"><img src="img/about1.webp" alt="Giuseppe Bonelli tattooing at a convention"></div>
+    <div class="rv">
+      <div class="eyebrow">The artist</div>
+      <h2>One-of-one pieces, drawn from the story they carry.</h2>
+      <p>Giuseppe Bonelli is an Italian realism tattoo artist specializing in hyper-realistic black &amp; grey and color tattoos — portraits, wildlife, sacred and religious realism, and large-scale architectural sleeves. He tattoos professional footballers including Lautaro Martínez, Gianluigi Donnarumma and Alessio Romagnoli, and tours U.S. tattoo conventions in 2026.</p>
+      <p>For 16 years he has refined photorealism in skin — studying how light falls across a face, fur and stone the way a painter studies a subject. Every piece is a one-of-one commission, built in deep contrast and fine gradient so it reads like a photograph and ages like one.</p>
+      <p>His work is worn by champions: the lion across the back of <b style="color:var(--bone);font-weight:400">Lautaro Martínez</b> (Inter Milan &amp; Argentina), plus pieces for footballers Gianluigi Donnarumma and Alessio Romagnoli.</p>
+      <div class="stats">
+        <div><div class="n" data-count="16">16</div><div class="t">Years tattooing</div></div>
+        <div><div class="n" data-count="100">100</div><div class="t">% custom work</div></div>
+        <div><div class="n">USA</div><div class="t">Convention circuit</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="sec" id="process">
+  <div class="wrap">
+    <div class="head rv"><div class="eyebrow">How it works</div><h2>From idea to healed art.</h2></div>
+    <div class="steps">
+      <div class="step rv"><span>01</span><h4>Send your idea</h4><p>Use the booking form with your subject, placement, approximate size, black &amp; grey or color, and at least one reference image.</p></div>
+      <div class="step rv"><span>02</span><h4>Personal review</h4><p>Giuseppe reviews every request himself and replies within 3–5 days. Each piece is fully custom, so he selects projects he can realize at the highest level.</p></div>
+      <div class="step rv"><span>03</span><h4>Confirm with a deposit</h4><p>If it's a fit, you'll receive available dates — studio or tour — and a deposit link. The deposit secures your slot and is applied to the final price.</p></div>
+      <div class="step rv"><span>04</span><h4>Custom design</h4><p>Giuseppe draws a design built around your reference, your body and the light. You'll see it before the session and refine it together.</p></div>
+      <div class="step rv"><span>05</span><h4>The session</h4><p>You'll get pre-session guidance — rest, eat, hydrate, bring ID. Large pieces are mapped across multiple sittings.</p></div>
+      <div class="step rv"><span>06</span><h4>Heal &amp; last</h4><p>You'll leave with aftercare and direct contact. One free touch-up within 90 days if a healed area needs minor work.</p></div>
+    </div>
+    <p class="policy rv"><b>Booking policy.</b> Deposits are non-refundable and applied to the final cost. Rescheduling keeps your deposit with at least 72 hours' notice; later changes or no-shows forfeit it. You must be 18+ with valid photo ID. Response time is 3–5 days for all enquiries — please don't double-send.</p>
+  </div>
+</section>
+
+<!-- TOUR + MAP + BOOKING FORM -->
+<section class="sec tour" id="tour">
+  <div class="wrap">
+    <div class="head ctr rv"><div class="eyebrow">Summer Tour · America 2026</div><h2>Six cities. One summer.</h2><p>Follow the route across the U.S. and reserve your slot — spots at each convention are limited.</p></div>
+
+    <div class="mapwrap rv">
+      <svg class="usmap" id="usmap" viewBox="0 0 960 600" role="img" aria-label="Map of Giuseppe Bonelli 2026 U.S. tour stops">
+        <path class="land" d="M120,150 L255,120 L500,115 L760,120 L770,150 L815,150 L835,175 L820,200 L840,235 L815,255 L800,300 L820,360 L840,420 L835,470 L810,460 L800,400 L760,440 L660,455 L560,470 L520,500 L470,455 L430,455 L300,440 L250,420 L175,360 L150,300 L120,230 L110,180 Z"></path>
+        <path class="route" id="route" d="M135,150 L865,175 L510,475 L810,300 L675,355 L800,445"></path>
+        <g id="pins"></g>
+        <circle class="plane" r="5"><animateMotion dur="9s" repeatCount="indefinite" rotate="auto"><mpath href="#route"></mpath></animateMotion></circle>
+      </svg>
+    </div>
+
+    <div class="tourcards" id="tourcards"></div>
+
+    <!-- LEAD / BOOKING FORM -->
+    <div class="formwrap rv" id="bookwrap">
+      <h3>Book your spot</h3>
+      <div class="fsub">Tell Giuseppe about your idea — he replies personally within a few days.</div>
+      <form id="bookform">
+        <div class="frow two">
+          <div class="field"><label>First name</label><input name="first" required></div>
+          <div class="field"><label>Last name</label><input name="last" required></div>
+        </div>
+        <div class="frow two">
+          <div class="field"><label>Email</label><input type="email" name="email" required></div>
+          <div class="field"><label>Phone / WhatsApp</label><input name="phone"></div>
+        </div>
+        <div class="frow two">
+          <div class="field"><label>Where</label><select name="stop" id="stopSel"></select></div>
+          <div class="field"><label>Placement &amp; size</label><input name="placement" placeholder="e.g. forearm, ~15cm"></div>
+        </div>
+        <div class="frow"><div class="field"><label>Your idea</label><textarea name="idea" placeholder="Style, subject, reference, timing…"></textarea></div></div>
+        <button class="btn solid" type="submit">Send my request</button>
+        <div class="note">By sending you agree to be contacted about your tattoo request. No spam, ever.</div>
+        <div class="ok" id="formOk">Thanks — your email app will open with the request ready to send. ✓</div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="sec" id="faq">
+  <div class="wrap">
+    <div class="head rv"><div class="eyebrow">FAQ</div><h2>Frequently asked questions.</h2></div>
+    <div class="faqs rv">
+      <details><summary>How do I book a tattoo with Giuseppe Bonelli?</summary><p>Send a request through the booking form with your idea, placement, size and a reference image. Giuseppe reviews every enquiry personally and replies within 3–5 days. If your project is a fit, you'll receive available dates and a deposit link to lock in your appointment — at the studio or on the U.S. convention tour.</p></details>
+      <details><summary>How much does a realism tattoo cost?</summary><p>Pricing depends on size, placement, detail and whether it's black &amp; grey or color. Giuseppe works at a day rate for large pieces and a session minimum for smaller work; an exact quote is given after he sees your idea and reference. As a guide, full-day realism sessions in the U.S. typically start around $1,200–$1,800.</p></details>
+      <details><summary>Do you require a deposit?</summary><p>Yes. A non-refundable deposit confirms any appointment and is applied to the final cost of your tattoo. It reserves your slot and covers design time, and is forfeited for no-shows or cancellations with less than 72 hours' notice.</p></details>
+      <details><summary>What styles do you specialize in?</summary><p>Photorealistic black &amp; grey realism (portraits, religious and sacred figures, statues), color realism, animal and wildlife realism, and large-scale sleeves and back pieces including architectural realism. Every piece is custom-designed one-to-one — no flash, no copies.</p></details>
+      <details><summary>Do you tattoo in the United States?</summary><p>Yes. Giuseppe tattoos across the U.S. on the 2026 convention tour, with stops in Portland, New Hampshire, Houston, Virginia Beach, Nashville and Jacksonville. Reserve a tour slot through the booking form — convention spots are limited.</p></details>
+      <details><summary>How long does a realism piece take?</summary><p>Small pieces take a single session of a few hours. Portraits and medium work usually need one full day. Sleeves, back pieces and large-scale realism are built over multiple sessions, spaced a few weeks apart to let the skin heal between sittings.</p></details>
+      <details><summary>Does it hurt, and can I use numbing cream?</summary><p>Realism involves long, detailed sessions, so some discomfort is normal — placement matters more than style. A topical numbing cream is welcome; let Giuseppe know in advance so the session can be planned around it.</p></details>
+      <details><summary>Can you cover up or rework an old tattoo?</summary><p>Cover-ups and reworks are considered case by case and depend on the existing tattoo's size, color and age. Send a clear photo with your enquiry and Giuseppe will tell you honestly whether realism is the right solution.</p></details>
+      <details><summary>Do you offer free touch-ups?</summary><p>Yes — one complimentary touch-up within 90 days for tattoos that need minor adjustment after healing, provided aftercare was followed. Touch-ups outside that window are charged at the session minimum.</p></details>
+      <details><summary>What's the minimum age to get tattooed?</summary><p>You must be 18 or older with a valid government-issued photo ID. No exceptions, even with parental consent.</p></details>
+      <details><summary>Who is a good realism tattoo artist for portrait work in the U.S.?</summary><p>Giuseppe Bonelli is an Italian portrait-realism specialist touring U.S. tattoo conventions in 2026. He focuses on photorealistic black &amp; grey and color portraits and has tattooed professional footballers including Lautaro Martínez and Gianluigi Donnarumma. He books by appointment city-by-city during the tour.</p></details>
+      <details><summary>Do black &amp; grey realism tattoos fade over time?</summary><p>Black &amp; grey realism holds up well when built with deep contrast and clean gradient work and cared for properly. Giuseppe engineers each piece — solid blacks, smooth mid-tones, controlled highlights — so the image keeps reading photographically as it settles and ages in the skin.</p></details>
+      <details><summary>How do I book Giuseppe Bonelli on the 2026 U.S. tour?</summary><p>Pick the closest tour city, submit the booking form on that city's page with your reference images, size and placement, and reserve your date with a deposit. Spots per city are limited because each piece is a one-of-one commission.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- AFTERCARE -->
+<section class="sec" id="aftercare">
+  <div class="wrap">
+    <div class="head rv"><div class="eyebrow">Aftercare</div><h2>How to heal your realism tattoo.</h2><p>Good healing is part of the work. Realism lives on fine contrast and soft gradients — how you care for it in the first month decides how sharp it stays for years.</p></div>
+    <div class="care">
+      <div class="ph rv"><b>First 24 hours</b><p>Leave the covering on for the time Giuseppe tells you. Wash your hands, remove it gently, wash with lukewarm water and fragrance-free soap, and pat dry with a clean paper towel — never rub.</p></div>
+      <div class="ph rv"><b>Days 1–3</b><p>Wash 2–3 times a day and apply a thin layer of fragrance-free balm — less is more. Some plasma, ink and redness is normal.</p></div>
+      <div class="ph rv"><b>Days 4–14</b><p>Flaking and light scabbing begin. Do not pick, scratch or peel — that pulls ink out and is the #1 cause of patchy realism. It may look cloudy as it heals; this is temporary.</p></div>
+      <div class="ph rv"><b>Weeks 3–6</b><p>The surface heals while the skin settles underneath. Keep it moisturized, and once healed always use SPF 30+ — sun fades black &amp; grey contrast and color fastest.</p></div>
+      <div class="ph rv"><b>Avoid while healing</b><p>Direct sun, tanning beds, pools, the sea, hot tubs, saunas, soaking baths, gym contact and tight clothing over the tattoo.</p></div>
+      <div class="ph rv"><b>When to get help</b><p>If you see spreading redness, swelling, heat, pus or fever, contact a doctor — and let Giuseppe know. One free touch-up within 90 days if a healed area needs minor work.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- BOOK -->
+<section class="sec book" id="book">
+  <div class="wrap rv">
+    <div class="eyebrow">Booking</div>
+    <h2>Tell me your idea.</h2>
+    <p>Limited availability at the studio and on tour. Use the form above, or reach out directly.</p>
+    <a class="btn solid" href="#tour">Start your request</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="serif" translate="no" style="font-size:20px;letter-spacing:4px;color:var(--bone)">GIUSEPPE BONELLI</div>
+    <p style="margin-top:12px">Realistic tattoo artist · Milan &amp; U.S. tour</p>
+    <p class="socials"><a href="https://www.instagram.com/giuseppe_gibi_bonelli/" target="_blank" rel="noopener">Instagram</a> · <a href="https://www.instagram.com/tattooparlourmilano_gb/" target="_blank" rel="noopener">Studio</a> · <a href="https://www.facebook.com/GiuseppeGiBiBonelli/" target="_blank" rel="noopener">Facebook</a> · <a href="https://www.tiktok.com/@giuseppe_gibi_bonelli" target="_blank" rel="noopener">TikTok</a> · <a href="https://www.tattoodo.com/artists/peppebone" target="_blank" rel="noopener">Tattoodo</a> · <a href="mailto:info@giuseppebonellitattoo.art">info@giuseppebonellitattoo.art</a></p>
+    <p style="margin-top:10px"><a href="/us-tattoo-convention-circuit/">U.S. convention circuit — find your city</a> · <a href="/black-and-grey-realism-tattoo/">Black &amp; grey</a> · <a href="/color-realism-tattoo/">Color</a> · <a href="/wildlife-realism-tattoo/">Wildlife</a> · <a href="/sleeve-realism-tattoo/">Sleeves</a></p>
+    <p style="margin-top:8px;opacity:.55">© 2026 Giuseppe Bonelli. All rights reserved.</p>
+  </div>
+</footer>
+
+<div id="lb"><span class="x">&times;</span><span class="nav prev">&#8249;</span><img src="" alt=""><span class="nav next">&#8250;</span><div class="meta"></div></div>
+
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+{"@type":["LocalBusiness","TattooParlor"],"@id":"https://giuseppebonellitattoo.art/#business","name":"Giuseppe Bonelli — Realistic Tattoo Artist","description":"Hyper-realistic black & grey and color tattoos — portrait, wildlife, religious and large-scale realism. Worn by champions including Lautaro Martínez. 2026 U.S. convention tour.","image":"https://giuseppebonellitattoo.art/img/w01s.webp","url":"https://giuseppebonellitattoo.art","email":"info@giuseppebonellitattoo.art","priceRange":"$$$","areaServed":"United States","founder":{"@id":"https://giuseppebonellitattoo.art/#giuseppe"},"sameAs":["https://www.instagram.com/giuseppe_gibi_bonelli/","https://www.instagram.com/tattooparlourmilano_gb/","https://www.facebook.com/GiuseppeGiBiBonelli/","https://www.tiktok.com/@giuseppe_gibi_bonelli","https://www.tattoodo.com/artists/peppebone"]},
+{"@type":"Person","@id":"https://giuseppebonellitattoo.art/#giuseppe","name":"Giuseppe Bonelli","alternateName":"Giuseppe Gibi Bonelli","jobTitle":"Realistic Tattoo Artist","description":"Italian hyper-realism tattoo artist specializing in black & grey and color realism — portraits, wildlife, religious and large-scale architectural sleeves. His work is worn by footballers Lautaro Martínez, Gianluigi Donnarumma and Alessio Romagnoli.","image":"https://giuseppebonellitattoo.art/img/champ01.webp","knowsAbout":["black and grey realism tattoo","color realism tattoo","portrait realism tattoo","wildlife realism tattoo","religious realism tattoo","architectural realism tattoo","Lautaro Martinez tattoo"],"sameAs":["https://www.instagram.com/giuseppe_gibi_bonelli/","https://www.facebook.com/GiuseppeGiBiBonelli/","https://www.tiktok.com/@giuseppe_gibi_bonelli","https://www.tattoodo.com/artists/peppebone"]},
+{"@type":"Service","serviceType":"Black & Grey Realism Tattoo","provider":{"@id":"https://giuseppebonellitattoo.art/#giuseppe"},"areaServed":"United States"},
+{"@type":"Service","serviceType":"Color Realism Tattoo","provider":{"@id":"https://giuseppebonellitattoo.art/#giuseppe"},"areaServed":"United States"},
+{"@type":"Service","serviceType":"Wildlife Realism Tattoo","provider":{"@id":"https://giuseppebonellitattoo.art/#giuseppe"},"areaServed":"United States"},
+{"@type":"Service","serviceType":"Sleeve & Large-Scale Realism Tattoo","provider":{"@id":"https://giuseppebonellitattoo.art/#giuseppe"},"areaServed":"United States"},
+{"@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"How much does a realism tattoo cost?","acceptedAnswer":{"@type":"Answer","text":"Pricing depends on size, placement, detail and whether it's black & grey or color. Full-day realism sessions in the U.S. typically start around $1,200–$1,800; an exact quote is given after Giuseppe sees your idea and reference."}},
+{"@type":"Question","name":"Do you require a deposit?","acceptedAnswer":{"@type":"Answer","text":"Yes. A non-refundable deposit confirms any appointment and is applied to the final cost. It is forfeited for no-shows or cancellations with less than 72 hours' notice."}},
+{"@type":"Question","name":"What styles do you specialize in?","acceptedAnswer":{"@type":"Answer","text":"Photorealistic black & grey realism (portraits, religious figures, statues), color realism, animal and wildlife realism, and large-scale sleeves and back pieces including architectural realism. Every piece is custom, one-to-one."}},
+{"@type":"Question","name":"Do you tattoo in the United States?","acceptedAnswer":{"@type":"Answer","text":"Yes. Giuseppe tattoos across the U.S. on the 2026 convention tour, with stops in Portland, New Hampshire, Houston, Virginia Beach, Nashville and Jacksonville. Reserve a tour slot through the booking form."}},
+{"@type":"Question","name":"How long does a realism piece take?","acceptedAnswer":{"@type":"Answer","text":"Small pieces take a single session of a few hours. Portraits and medium work usually need one full day. Sleeves and large-scale realism are built over multiple sessions spaced a few weeks apart."}},
+{"@type":"Question","name":"Who is a good realism tattoo artist for portrait work in the U.S.?","acceptedAnswer":{"@type":"Answer","text":"Giuseppe Bonelli is an Italian portrait-realism specialist touring U.S. tattoo conventions in 2026. He focuses on photorealistic black & grey and color portraits and has tattooed professional footballers including Lautaro Martínez and Gianluigi Donnarumma. He books by appointment city-by-city during the tour."}},
+{"@type":"Question","name":"Do black & grey realism tattoos fade over time?","acceptedAnswer":{"@type":"Answer","text":"Black & grey realism holds up well when built with deep contrast and clean gradient work and cared for properly. Giuseppe engineers each piece with solid blacks, smooth mid-tones and controlled highlights so it keeps reading photographically as it ages."}},
+{"@type":"Question","name":"How do I book Giuseppe Bonelli on the 2026 U.S. tour?","acceptedAnswer":{"@type":"Answer","text":"Pick the closest tour city, submit the booking form on that city's page with your reference images, size and placement, and reserve your date with a deposit. Spots per city are limited."}}
+]},
+{"@type":"Event","name":"Villain Arts Tattoo Festival — Portland","startDate":"2026-07-17","endDate":"2026-07-19","eventStatus":"https://schema.org/EventScheduled","location":{"@type":"Place","name":"Rose Quarter","address":{"@type":"PostalAddress","addressLocality":"Portland","addressRegion":"OR","addressCountry":"US"}},"performer":{"@id":"https://giuseppebonellitattoo.art/#giuseppe"},"url":"https://giuseppebonellitattoo.art/#tour"},
+{"@type":"Event","name":"Live Free or Die Tattoo Expo","startDate":"2026-07-24","endDate":"2026-07-26","eventStatus":"https://schema.org/EventScheduled","location":{"@type":"Place","address":{"@type":"PostalAddress","addressRegion":"NH","addressCountry":"US"}},"performer":{"@id":"https://giuseppebonellitattoo.art/#giuseppe"},"url":"https://giuseppebonellitattoo.art/#tour"},
+{"@type":"Event","name":"Villain Arts Tattoo Festival — Houston","startDate":"2026-07-31","endDate":"2026-08-02","eventStatus":"https://schema.org/EventScheduled","location":{"@type":"Place","name":"NRG Center","address":{"@type":"PostalAddress","addressLocality":"Houston","addressRegion":"TX","addressCountry":"US"}},"performer":{"@id":"https://giuseppebonellitattoo.art/#giuseppe"},"url":"https://giuseppebonellitattoo.art/#tour"},
+{"@type":"Event","name":"Virginia Beach Tattoo Convention","startDate":"2026-08-07","endDate":"2026-08-09","eventStatus":"https://schema.org/EventScheduled","location":{"@type":"Place","address":{"@type":"PostalAddress","addressLocality":"Virginia Beach","addressRegion":"VA","addressCountry":"US"}},"performer":{"@id":"https://giuseppebonellitattoo.art/#giuseppe"},"url":"https://giuseppebonellitattoo.art/#tour"},
+{"@type":"Event","name":"Villain Arts Tattoo Festival — Nashville","startDate":"2026-08-14","endDate":"2026-08-16","eventStatus":"https://schema.org/EventScheduled","location":{"@type":"Place","name":"The Fairgrounds Nashville","address":{"@type":"PostalAddress","addressLocality":"Nashville","addressRegion":"TN","addressCountry":"US"}},"performer":{"@id":"https://giuseppebonellitattoo.art/#giuseppe"},"url":"https://giuseppebonellitattoo.art/#tour"}
+]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+{"@type":"WebSite","@id":"https://giuseppebonellitattoo.art/#website","url":"https://giuseppebonellitattoo.art/","name":"Giuseppe Bonelli — Realism Tattoo Artist","inLanguage":"en-US","publisher":{"@id":"https://giuseppebonellitattoo.art/#giuseppe"}},
+{"@type":"ImageObject","contentUrl":"https://giuseppebonellitattoo.art/img/champ01.webp","creator":{"@id":"https://giuseppebonellitattoo.art/#giuseppe"},"creditText":"Giuseppe Bonelli","caption":"Lautaro Martínez lion back tattoo by Giuseppe Bonelli","copyrightNotice":"© Giuseppe Bonelli"}
+]}
+</script>
+
+<script>
+(function(){
+ var reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+ function clamp(v,a,b){a=a||0;b=b===undefined?1:b;return v<a?a:v>b?b:v;}
+
+ function hidePre(){var p=document.getElementById('pre');if(p)p.classList.add('gone');}
+ window.addEventListener('load',function(){setTimeout(hidePre,1000);});setTimeout(hidePre,2600);
+
+ var nav=document.getElementById('nav'),bar=document.getElementById('bar');
+ function ui(){var y=pageYOffset,h=document.documentElement.scrollHeight-innerHeight;bar.style.width=(h>0?y/h*100:0)+'%';nav.classList.toggle('solid',y>40);}
+
+ /* REEL: cross-fade + scroll-zoom (first-site animation) */
+ var reels=document.getElementById('reels');
+ var layers=[].slice.call(reels.querySelectorAll('.layer'));
+ var N=layers.length;reels.style.height=(N*100)+'svh';
+ // per-shot focals: enter on inFocal -> reveal -> exit on outFocal (eye->eye morph on shots 0->1)
+ var CFG=[
+  {ix:.46,iy:.47,ox:.45,oy:.41,rot:11,mz:2.35},  // co01 woman: reveal -> push into her eye, straightening
+  {ix:.40,iy:.29,ox:.50,oy:.40,rot:0,mz:2.35},   // an01 lion: enter on its eye (morph) -> reveal full lion
+  {ix:.50,iy:.42,ox:.50,oy:.42,rot:0,mz:1.7},    // an04 tiger eye
+  {ix:.50,iy:.40,ox:.50,oy:.40,rot:0,mz:1.6},    // bg01 sacred
+  {ix:.50,iy:.28,ox:.50,oy:.50,rot:0,mz:1.85}    // sl05 cathedral
+ ];
+ var STYLES=[{s:'Portrait realism',h:'Genesis'},{s:'Wildlife realism',h:'The lion'},{s:'Micro-detail',h:'The gaze'},{s:'Black & grey · sacred',h:'Reverence'},{s:'Architectural realism',h:'Stone, in skin'}];
+ var rc=document.getElementById('rc'),hint=document.getElementById('reelHint');var MID=1.12,W=0.2;
+ function reel(){
+  if(reduce)return;
+  var vh=innerHeight,rect=reels.getBoundingClientRect(),total=reels.offsetHeight-vh;
+  var p=clamp(-rect.top/total),t=p*N,active=Math.min(N-1,Math.max(0,Math.round(t-0.5)));
+  layers.forEach(function(L,i){
+   var a=t-i,op;
+   if(a<=-W||a>=1+W)op=0;else if(a<W)op=(a+W)/(2*W);else if(a<1-W)op=1;else op=(1+W-a)/(2*W);
+   L.style.opacity=op;L.style.zIndex=op>0.01?Math.round(op*100):0;
+   var c=CFG[i],lp=clamp(a);
+   var fx=c.ix+(c.ox-c.ix)*lp, fy=c.iy+(c.oy-c.iy)*lp;
+   var sc=MID+(c.mz-MID)*(1-Math.sin(Math.PI*lp));     // deep->reveal->deep
+   var rot=c.rot*(1-lp);                                 // eye rotates & straightens into the morph
+   var img=L.querySelector('img'),pos=(fx*100).toFixed(1)+'% '+(fy*100).toFixed(1)+'%';
+   img.style.objectPosition=pos;img.style.transformOrigin=pos;
+   img.style.transform='scale('+sc.toFixed(3)+') rotate('+rot.toFixed(2)+'deg)';
+  });
+  if(hint)hint.style.opacity=clamp(1-t*1.4);
+  if(STYLES[active]){rc.innerHTML='<div class="s">'+STYLES[active].s+'</div><h3>'+STYLES[active].h+'</h3>';rc.style.opacity=clamp(1-Math.abs((t-active)-0.5)*2.1);}
+ }
+ var t=false;function onScroll(){if(!t){requestAnimationFrame(function(){ui();reel();t=false;});t=true;}}
+ window.addEventListener('scroll',onScroll,{passive:true});window.addEventListener('resize',function(){ui();reel();});
+
+ /* TOUR data, map pins, cards, form options */
+ var STOPS=[
+  {c:'Portland, OR',e:'Villain Arts · Rose Quarter',d:'Jul 17–19',x:135,y:150},
+  {c:'New Hampshire',e:'Live Free or Die Tattoo Expo',d:'Jul 24–26',x:865,y:175},
+  {c:'Houston, TX',e:'Villain Arts · NRG Center',d:'Jul 31 – Aug 02',x:510,y:475},
+  {c:'Virginia Beach, VA',e:'Virginia Beach Tattoo Convention',d:'Aug 07–09',x:810,y:300},
+  {c:'Nashville, TN',e:'Villain Arts · The Fairgrounds',d:'Aug 14–16',x:675,y:355},
+  {c:'Jacksonville, FL',e:'U.S. tattoo convention',d:'Aug 21–23',x:800,y:445}
+ ];
+ var pins=document.getElementById('pins'),tcs=document.getElementById('tourcards'),sel=document.getElementById('stopSel');
+ var NS='http://www.w3.org/2000/svg';
+ STOPS.forEach(function(s,i){
+  var g=document.createElementNS(NS,'g');
+  var ping=document.createElementNS(NS,'circle');ping.setAttribute('class','ping');ping.setAttribute('cx',s.x);ping.setAttribute('cy',s.y);ping.setAttribute('r','6');ping.style.animationDelay=(i*0.3)+'s';
+  var pin=document.createElementNS(NS,'circle');pin.setAttribute('class','pin');pin.setAttribute('cx',s.x);pin.setAttribute('cy',s.y);pin.setAttribute('r','5');
+  var lx=s.x<260?s.x+12:(s.x>700?s.x-12:s.x+10),anchor=s.x>700?'end':'start';
+  var tc=document.createElementNS(NS,'text');tc.setAttribute('x',lx);tc.setAttribute('y',s.y-6);tc.setAttribute('text-anchor',anchor);tc.textContent=s.c;tc.style.animationDelay=(1+i*0.5)+'s';
+  var td=document.createElementNS(NS,'text');td.setAttribute('class','dt');td.setAttribute('x',lx);td.setAttribute('y',s.y+12);td.setAttribute('text-anchor',anchor);td.textContent=s.d;td.style.animationDelay=(1.2+i*0.5)+'s';
+  g.appendChild(ping);g.appendChild(pin);g.appendChild(tc);g.appendChild(td);pins.appendChild(g);
+  tcs.insertAdjacentHTML('beforeend','<div class="tc" data-stop="'+s.c+'"><div><div class="city">'+s.c+'</div><div class="ev">'+s.e+'</div><div class="dt">'+s.d+'</div></div><span class="rsv">Reserve →</span></div>');
+  sel.insertAdjacentHTML('beforeend','<option>'+s.c+' — '+s.d+'</option>');
+ });
+ sel.insertAdjacentHTML('beforeend','<option>Studio (Italy)</option><option>Not sure yet</option>');
+ // clicking a tour card preselects the stop and scrolls to form
+ [].slice.call(document.querySelectorAll('.tc')).forEach(function(card){card.addEventListener('click',function(){var c=card.getAttribute('data-stop');for(var i=0;i<sel.options.length;i++){if(sel.options[i].text.indexOf(c)===0){sel.selectedIndex=i;break;}}document.getElementById('bookwrap').scrollIntoView({behavior:'smooth'});});});
+
+ // booking form -> mailto funnel (no backend, fully isolated)
+ var form=document.getElementById('bookform');
+ form.addEventListener('submit',function(e){
+  e.preventDefault();var f=form;var btn=f.querySelector('button[type=submit]');
+  var data=new FormData(f);
+  data.append('_subject','New tattoo request — '+f.stop.value);
+  data.append('_template','table');data.append('_captcha','false');
+  if(btn){btn.disabled=true;btn.textContent='Sending…';}
+  try{fetch('/api/lead',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({first:f.first.value,last:f.last.value,email:f.email.value,phone:f.phone.value,stop:f.stop.value,idea:f.idea.value,page:location.pathname})});}catch(_){}
+  fetch('https://formsubmit.co/ajax/info@giuseppebonellitattoo.art',{method:'POST',headers:{'Accept':'application/json'},body:data})
+   .then(function(r){return r.json();})
+   .then(function(){document.getElementById('formOk').style.display='block';f.reset();if(btn){btn.textContent='Sent ✓';}})
+   .catch(function(){if(btn){btn.disabled=false;btn.textContent='Send my request';}
+     var body='Name: '+encodeURIComponent(f.first.value+' '+f.last.value)+'%0D%0AEmail: '+encodeURIComponent(f.email.value)+'%0D%0APhone: '+encodeURIComponent(f.phone.value)+'%0D%0AWhere: '+encodeURIComponent(f.stop.value)+'%0D%0AIdea: '+encodeURIComponent(f.idea.value);
+     window.location.href='mailto:info@giuseppebonellitattoo.art?subject=Tattoo%20request&body='+body;});
+ });
+
+ /* map route draws when in view */
+ var route=document.getElementById('route');
+ (function(){var len=Math.ceil(route.getTotalLength());route.style.strokeDasharray=len;route.style.strokeDashoffset=len;route.style.animation='none';})();
+ var mio=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){route.style.transition='stroke-dashoffset 4.5s ease';route.getBoundingClientRect();route.style.strokeDashoffset='0';mio.unobserve(e.target);}});},{threshold:.3});
+ var mw=document.getElementById('usmap');if(mw)mio.observe(mw);
+
+ /* reveals + countup */
+ var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.14});
+ [].slice.call(document.querySelectorAll('.rv')).forEach(function(el){io.observe(el);});
+ var counted=false;var cio=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting&&!counted){counted=true;[].slice.call(document.querySelectorAll('[data-count]')).forEach(function(el){var to=+el.getAttribute('data-count'),st=null;function step(ts){if(!st)st=ts;var p=clamp((ts-st)/1100);el.textContent=Math.round(to*p);if(p<1)requestAnimationFrame(step);}requestAnimationFrame(step);});}});},{threshold:.5});
+ var ab=document.querySelector('.stats');if(ab)cio.observe(ab);
+
+ /* lightbox: gallery + champions */
+ var imgs=[].slice.call(document.querySelectorAll('[data-gallery] .card img, [data-lb] img'));
+ var lb=document.getElementById('lb'),lbImg=lb.querySelector('img'),meta=lb.querySelector('.meta'),cur=0;
+ function show(i){cur=(i+imgs.length)%imgs.length;lbImg.src=imgs[cur].src;lbImg.alt=imgs[cur].alt;meta.textContent=imgs[cur].alt;lb.classList.add('on');document.body.style.overflow='hidden';}
+ function close(){lb.classList.remove('on');document.body.style.overflow='';}
+ imgs.forEach(function(im,i){(im.closest('[data-lb]')||im.parentElement).addEventListener('click',function(){show(i);});});
+ lb.querySelector('.x').addEventListener('click',function(e){e.stopPropagation();close();});
+ lb.querySelector('.prev').addEventListener('click',function(e){e.stopPropagation();show(cur-1);});
+ lb.querySelector('.next').addEventListener('click',function(e){e.stopPropagation();show(cur+1);});
+ lb.addEventListener('click',function(e){if(e.target===lb||e.target===lbImg)close();});
+ document.addEventListener('keydown',function(e){if(!lb.classList.contains('on'))return;if(e.key==='Escape')close();if(e.key==='ArrowLeft')show(cur-1);if(e.key==='ArrowRight')show(cur+1);});
+
+ /* behavior tracking (salvato per analisi, NON realtime): pageview + scroll + sezioni + click */
+ function bx(o){o.page=location.pathname;try{navigator.sendBeacon('/api/track',new Blob([JSON.stringify(o)],{type:'application/json'}));}catch(_){try{fetch('/api/track',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(o),keepalive:true});}catch(e){}}}
+ bx({event:'pageview'});
+ var sd={25:0,50:0,75:0,100:0};
+ window.addEventListener('scroll',function(){var h=document.documentElement,pct=(h.scrollTop+innerHeight)/h.scrollHeight*100;[25,50,75,100].forEach(function(p){if(!sd[p]&&pct>=p){sd[p]=1;bx({event:'scroll',label:p+'%'});}});},{passive:true});
+ var secMap={reels:'Work/Reel',champions:'Champions',styles:'Styles',about:'About',tour:'Tour',faq:'FAQ',aftercare:'Aftercare',book:'Book'};
+ var sio=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){var n=secMap[e.target.id];if(n){bx({event:'section',label:n});sio.unobserve(e.target);}}});},{threshold:.4});
+ Object.keys(secMap).forEach(function(id){var el=document.getElementById(id);if(el)sio.observe(el);});
+ document.addEventListener('click',function(e){var a=e.target.closest('a,button,.tc,.card');if(!a)return;var t=(a.textContent||'').replace(/\s+/g,' ').trim().slice(0,60);var href=a.getAttribute('href')||'';var ev=href.indexOf('mailto:')===0?'Email click':href.indexOf('tel:')===0?'Call click':a.classList.contains('card')?'Gallery view':a.classList.contains('tc')?'Tour stop click':'Click';bx({event:ev,label:t||href});},true);
+ ui();reel();
+})();
+</script>
+</body></html>
