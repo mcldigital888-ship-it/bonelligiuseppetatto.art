@@ -187,9 +187,12 @@ for c in CITIES:
 # NO Event schema here (Giuseppe's confirmed stops are only the summer tour above).
 # LOCAL_NOTES: real, web-verified venue/neighborhood detail for select circuit cities (added a couple at a time
 # so pages stop reading as identical templates). Verified 2026-07-12 via villainarts.com + local sources.
+# Savannah & Asheville added 2026-07-18, verified via villainarts.com + local tattoo-shop listings.
 LOCAL_NOTES={
  "wildwood":("The venue & boardwalk","Villain Arts takes over the Wildwoods Convention Center at 4501 Boardwalk, right on the Wildwoods' two-mile boardwalk of classic Doo Wop motels and Morey's Piers. It's long-running — locals know it as the Wildwood Tattoo Beach Bash — and it sits in a town that already has a boardwalk tattoo scene (Love Rock Tattoo, Oxygen), so convention weekend runs alongside shops that tattoo year-round just blocks away."),
  "colorado-springs":("The venue & area","Villain Arts is held at the Norris Penrose Event Center on Lower Gold Camp Rd, in the foothills below Cheyenne Mountain and a short drive from the Broadmoor. It's a newer stop on the circuit — Colorado Springs' second year hosting the festival — pulling from the city's growing tattoo and outdoor-culture scene along the Pikes Peak corridor."),
+ "savannah":("The venue & scene","Villain Arts sets up at the Savannah Convention Center on Hutchinson Island, across the river from the historic district — a short walk from the River Street waterfront. Savannah's own tattoo scene runs through the historic district itself, from Bay Street shops like Anonymous Tattoo and Alien Arts to Riverside Tattoo Parlor in the Starland District, so convention weekend overlaps with a city that already tattoos year-round."),
+ "asheville":("The venue & scene","Villain Arts takes over Harrah's Cherokee Center on Haywood Street, right in downtown Asheville — the same street that runs past Traveler Tattoo, Girl and Goblin and Heron Mark Tattoo & Gallery. It's a short drive from the River Arts District's working studios and from the West Asheville shops along Haywood Road, so the festival lands in a city built around a genuine, long-running tattoo and craft-art culture."),
 }
 CIRCUIT=[
  ("philadelphia","Philadelphia","Pennsylvania","January 23–25, 2026"),

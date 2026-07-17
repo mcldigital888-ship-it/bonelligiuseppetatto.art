@@ -14,10 +14,16 @@ REGOLA: leggere tutto il log prima di scegliere la miglioria del giorno; mai rip
 
 ## Log giornaliero:
 - 2026-07-12 — contenuti — copy locale unico (venue+quartiere, verificato via ricerca web) su 2 pagine città circuito: Wildwood NJ (Wildwoods Convention Center, boardwalk/Doo Wop motels, Love Rock Tattoo) e Colorado Springs CO (Norris Penrose Event Center, Cheyenne Mountain/Broadmoor) — sostituito il blocco generico "Worn by champions" con "The venue & ..." SOLO su queste 2, invariato sulle altre 26 — IndexNow 200 (2 URL)
+- [NON loggato a suo tempo] 2026-07-15 — tecnica — commit "SEO: shorter meta, absolute og:image, og:url, H1 keyword" solo su homepage (meta description più corta, og:image/og:url assoluti, H1 con keyword) — retro-registrato oggi trovandolo in git log
+- 2026-07-18 — contenuti — copy locale unico (venue+quartiere, verificato via ricerca web) su altre 2 pagine città circuito: Savannah GA (Savannah Convention Center su Hutchinson Island, scena tattoo historic district: Anonymous/Alien Arts su Bay St, Riverside Tattoo Starland District) e Asheville NC (Harrah's Cherokee Center su Haywood St, stessa via di Traveler Tattoo/Girl and Goblin/Heron Mark, vicino River Arts District e West Asheville) — blocco "The venue & scene" SOLO su queste 2, invariato sulle altre 24 — validazioni JSON-LD/immagini/node --check OK — deploy OK — IndexNow 200 (2 URL) — ⚠️ vedi nota cache sotto
+
+## ⚠️ PROBLEMA APERTO (dal 2026-07-18): cache Cloudflare stale su tutte le pagine città circuito
+Verificato oggi: tutte le pagine `/realism-tattoo-artist-*/` + l'hub `/us-tattoo-convention-circuit/` rispondono `Last-Modified: Mon, 13 Jul 2026` quando richieste dal dominio pubblico (via Cloudflare), NONOSTANTE il file sull'origin (droplet, verificato via IP diretto+Host header) sia corretto e aggiornato (Last-Modified oggi). Cloudflare mostra `cf-cache-status: DYNAMIC` (= non dovrebbe cachare) eppure serve contenuto vecchio in modo persistente anche con query cache-busting. La homepage invece risulta aggiornata. Sospetto: Page Rule/Cache Rule "Cache Everything" o tiered cache su Cloudflare con TTL lungo sulle pagine città, mai purgata dal deploy del 13/7. Serve: Marco controlla dashboard Cloudflare (zone giuseppebonellitattoo.art) e fa un purge cache mirato o globale — non ho credenziali/API token Cloudflare in questa sessione per farlo. Finché non risolto, le migliorie SEO sulle pagine città (incluse quelle di oggi) potrebbero non essere visibili a visitatori/crawler reali.
 
 ## Vietato sempre: eventi/date inventate, recensioni finte, claim "best" auto-proclamati, riferimenti a Penny/MCL.
 ## Idee in coda (da fare nei prossimi giorni, una al giorno):
-- Copy locale unico per le altre 26 pagine città circuito (batch da 2-3 città/giorno, con dettagli veri da ricerca web: venue, quartieri, scena tattoo) — fatte finora: Wildwood, Colorado Springs
+- Copy locale unico per le altre 24 pagine città circuito (batch da 2-3 città/giorno, con dettagli veri da ricerca web: venue, quartieri, scena tattoo) — fatte finora: Wildwood, Colorado Springs, Savannah, Asheville
+- Pulizia: rimuovere i file .bak lasciati nel commit del 15/7 (dist/index.html.bak, site/index.html.bak, gen_landing.py.bak) — dist/index.html.bak è pubblicamente accessibile sul sito, da valutare
 - FAQ specifiche per pagina stile (1/giorno)
 - Blocco "Convention day: how it works" su pagine tour
 - Blocco "Fresh vs healed realism" (quando Beppe manda foto healed)
